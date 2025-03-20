@@ -1,16 +1,20 @@
 <html>
 
-<script>
+<head>
+</head>
 
-    const obj = JSON.parse(`{"name":"xyz","age":"17","dob":"1997-03-14"}`);
+<body>
+    <script>
+        function call() {
+            const obj = JSON.parse(`{"name":"xyz","age":"17","dob":"1997-03-14"}`);
 
-    console.log(obj.dob);
-
-    a = new Date(obj.dob);
-
-    console.log(a);
-
-</script>
-
+            obj.dob = new Date(obj.dob);
+            document.getElementById("demo").innerHTML =
+                "My name is " + obj.name + " and my birthdate is " + obj.dob.toDateString();
+        }
+    </script>
+    <p id="demo"></p>
+    <button onclick="call()">Click me</button>
+</body>
 
 </html>
