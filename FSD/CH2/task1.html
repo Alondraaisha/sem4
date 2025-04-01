@@ -1,0 +1,30 @@
+<html>
+
+<head>
+   
+</head>
+
+<body>
+    <h1 id="h"></h1>
+    <button onclick=" setInterval(change, 50)">click me</button>
+    <script>
+        size = 15
+
+        function change() {
+            a = document.getElementById("h")
+            a.innerHTML = "hello"
+            a.style.color = "blue"
+            a.style.fontSize = size + "px"
+
+            if (size <= 50) {
+                size++
+            }
+
+        }
+       
+
+
+    </script>
+</body>
+
+</html>

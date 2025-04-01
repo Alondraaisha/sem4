@@ -1,0 +1,8 @@
+fs = require("fs")
+// fs.mkdirSync("hello")
+//fs.writeFileSync("hello/data.txt", 'Hello')
+//fs.appendFileSync("hello/data.txt", "how are you?")
+data = fs.readFileSync("hello/data.txt", 'utf-8')
+fs.renameSync("hello/data.txt", "hello/user.txt")
+console.log(data)
+fs.unlinkSync("hello/user.txt")
